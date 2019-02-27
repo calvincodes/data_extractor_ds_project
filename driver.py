@@ -18,5 +18,6 @@ with open('raw_dataset.csv') as sample_csv:
             line_count += 1
             f = open("dataset_output/" + str(row[0]) + ".txt", "w")
             f.write(row[9])
+            f.truncate(2000)
             f.close()
             print('\tArticle ' + str(row[0]) + ' written to '  + str(row[0]) + '.txt')
